@@ -1,0 +1,44 @@
+{
+  "name": "digilocker-fraud-detection",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/index.js",
+    "db:init": "node server/schema.js",
+    "db:seed": "node server/seed.js",
+    "db:testuser": "node server/addTestUser.js",
+    "db:check": "node server/checkDb.js",
+    "db:import": "node server/importDataset.js",
+    "rules:eval": "node server/evalDataset.js",
+    "demo:reset": "node server/demoSetup.js",
+    "demo:device": "node server/demoDeviceAttack.js",
+    "test:rules": "node server/e2eTest.js",
+    "db:reset": "node server/schema.js --reset",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^29.1.1",
+    "oxlint": "^1.90.0",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}

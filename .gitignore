@@ -1,0 +1,65 @@
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Vite
+.vite/
+*.local
+
+# Testing
+.nyc_output/
+vitest-results/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Docker
+.docker/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Operating system
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Deployment
+.render/
+
+# Security and certificates
+*.pem
+*.key
+*.crt

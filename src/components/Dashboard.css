@@ -1,0 +1,101 @@
+.Dash {
+  min-height: 100vh;
+  padding: 28px 36px 60px;
+  background: radial-gradient(1200px 600px at 10% -10%, #1d2160 0%, transparent 60%), #0d1026;
+  color: #e8ebff;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+.Dash--center { display: flex; align-items: center; justify-content: center; font-size: 16px; }
+
+.Dash__header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+.Dash__header h1 { margin: 0; font-size: 28px; letter-spacing: -0.4px; }
+.Dash__header p { margin: 4px 0 0; color: #8b93b8; font-size: 14px; }
+.Dash__controls { display: flex; align-items: center; gap: 14px; }
+.Dash__controls select {
+  background: #181c3d; color: #e8ebff; border: 1px solid #2c3160; border-radius: 8px;
+  padding: 8px 12px; font-size: 14px; outline: none;
+}
+.Dash__controls a { color: #a78bfa; text-decoration: none; font-size: 14px; font-weight: 600; }
+.Dash__controls a:hover { text-decoration: underline; }
+.Dash__live { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #8b93b8; }
+.Dash__live i { width: 9px; height: 9px; border-radius: 50%; background: #f59e0b; }
+.Dash__live.is-live { color: #4ade80; }
+.Dash__live.is-live i { background: #22c55e; animation: pulse 1.6s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.Dash__kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 16px; }
+.Dash__kpi {
+  background: linear-gradient(160deg, #1a1e45, #141836);
+  border: 1px solid #262a52; border-top: 3px solid var(--c);
+  border-radius: 14px; padding: 16px 18px;
+}
+.Dash__kpi-value { font-size: 34px; font-weight: 700; color: var(--c); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.Dash__kpi-label { margin-top: 4px; font-size: 13.5px; font-weight: 600; }
+.Dash__kpi-hint { margin-top: 4px; font-size: 12px; color: #8b93b8; }
+
+.Dash__row { display: grid; gap: 16px; margin-bottom: 16px; }
+.Dash__row--2-1 { grid-template-columns: 2fr 1fr; }
+.Dash__row--1-1-1 { grid-template-columns: repeat(3, 1fr); }
+.Dash__row--1-1 { grid-template-columns: 1fr 1fr; }
+
+.Dash__card {
+  background: #151938; border: 1px solid #262a52; border-radius: 14px; padding: 18px 20px; min-width: 0;
+}
+.Dash__card h3 { margin: 0 0 12px; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.Dash__badge { background: #ef4444; color: #fff; border-radius: 10px; padding: 1px 8px; font-size: 12px; }
+.Dash__empty { color: #8b93b8; font-size: 13.5px; text-align: center; margin: 60px 0; }
+
+.Dash__blocked {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 12px; margin-bottom: 8px; background: #1b1f47; border-radius: 10px; border: 1px solid #2c3160;
+}
+.Dash__blocked strong { display: block; font-size: 14px; }
+.Dash__blocked small { color: #8b93b8; font-size: 12px; }
+.Dash__blocked-right { display: flex; align-items: center; gap: 12px; }
+.Dash__blocked-right b { font-size: 20px; color: #fb7185; font-variant-numeric: tabular-nums; }
+.Dash__blocked-right button {
+  background: transparent; color: #a78bfa; border: 1px solid #4a3fa0; border-radius: 7px; padding: 5px 10px; cursor: pointer; font-size: 12.5px;
+}
+.Dash__blocked-right button:hover { background: #2a2470; }
+.Dash__tags { display: flex; gap: 5px; margin-top: 6px; }
+.Dash__tags span { background: #3b2f8f; color: #cfc6ff; border-radius: 5px; font-size: 11px; font-weight: 700; padding: 2px 7px; }
+
+.Dash__list { max-height: 330px; overflow-y: auto; }
+.Dash__alert { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid #22265a; }
+.Dash__alert:last-child { border-bottom: none; }
+.Dash__alert div { flex: 1; min-width: 0; }
+.Dash__alert strong { display: block; font-size: 13.5px; }
+.Dash__alert small { color: #8b93b8; font-size: 12px; }
+.Dash__alert em { font-size: 12px; font-style: normal; font-weight: 600; text-transform: uppercase; }
+.Dash__sev { color: #10132b; font-weight: 800; font-size: 12px; border-radius: 6px; padding: 4px 8px; }
+
+.Dash__event {
+  display: grid; grid-template-columns: 78px 1fr auto auto; gap: 10px; align-items: center;
+  padding: 7px 0; border-bottom: 1px solid #22265a; font-size: 13px;
+}
+.Dash__event time { color: #8b93b8; font-variant-numeric: tabular-nums; }
+.Dash__event small { color: #8b93b8; }
+.Dash__event b { background: #ef4444; color: #fff; border-radius: 5px; padding: 1px 7px; font-size: 11px; }
+.Dash__event.is-bad span { color: #fb7185; }
+
+.Dash__table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.Dash__table th { text-align: left; color: #8b93b8; font-weight: 600; font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #2c3160; }
+.Dash__table td { padding: 10px; border-bottom: 1px solid #22265a; vertical-align: middle; }
+.Dash__table tr.is-hot td { color: #fb7185; font-weight: 600; }
+.Dash__rid { display: inline-block; color: #10132b; font-weight: 800; font-size: 11.5px; border-radius: 5px; padding: 2px 7px; margin-right: 8px; }
+.Dash__bar { height: 6px; background: #22265a; border-radius: 4px; margin-bottom: 4px; overflow: hidden; width: 110px; }
+.Dash__bar i { display: block; height: 100%; border-radius: 4px; }
+.Dash__rules { overflow-x: auto; }
+
+@media (max-width: 1100px) {
+  .Dash__kpis { grid-template-columns: repeat(3, 1fr); }
+  .Dash__row--2-1, .Dash__row--1-1-1, .Dash__row--1-1 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .Dash { padding: 18px 14px 40px; }
+  .Dash__kpis { grid-template-columns: repeat(2, 1fr); }
+}
